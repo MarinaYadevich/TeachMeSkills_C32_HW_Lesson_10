@@ -10,8 +10,8 @@ public class Main {
         OperationCard.createAddCard(client1,234,457435,5000);
         OperationCard.createAddCard(client1,234,457435,5000);
         OperationCard.createAddCard(client1,266,457485,9000);
-        OperationCard.createAddCard(client1,000,454835,2000);
-        OperationCard.createAddCard(client1,000,454835,2000);
+        OperationCard.createAddCard(client1,123,454835,2000);
+        OperationCard.createAddCard(client1,123,454835,2000);
 
         OperationCard.displayCards(client1);
         OperationCard.showNumberDuplicateCards(client1);

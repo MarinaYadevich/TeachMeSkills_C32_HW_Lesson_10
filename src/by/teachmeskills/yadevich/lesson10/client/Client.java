@@ -13,7 +13,7 @@ public class Client {
     public Client(String name, String surname, String passportNumber) {
         this.name = name;
         this.surname = surname;
-        this.cards = new ArrayList<Card>();
+        this.cards = new ArrayList<>();
         this.passportNumber = passportNumber;
     }
 

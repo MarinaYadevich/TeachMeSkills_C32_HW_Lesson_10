@@ -3,8 +3,8 @@ package by.teachmeskills.yadevich.lesson10.card;
 import java.util.Objects;
 
 public class Card {
-    private int cvv;
-    private int cardNumber;
+    private final int cvv;
+    private final int cardNumber;
     private double amount;
 
     public Card(int cvv, int cardNumber, double amount) {
@@ -13,31 +13,6 @@ public class Card {
         this.amount = amount;
     }
 
-    public int getCvv() {
-        return cvv;
-    }
-
-    public void setCvv(int cvv) {
-        this.cvv = cvv;
-    }
-
-    public int getCardNumber() {
-        return cardNumber;
-    }
-
-    public void setCardNumber(int cardNumber) {
-        this.cardNumber = cardNumber;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -45,9 +20,21 @@ public class Card {
         Card card = (Card) o;
         return cvv == card.cvv && cardNumber == card.cardNumber;
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(cvv, cardNumber);
+    }
+
+    public int getCvv() {
+        return cvv;
+    }
+    public int getCardNumber() {
+        return cardNumber;
+    }
+    public double getAmount() {
+        return amount;
+    }
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 }

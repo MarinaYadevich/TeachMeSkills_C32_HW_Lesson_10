@@ -5,73 +5,33 @@ import by.teachmeskills.yadevich.lesson10.card.Card;
 import java.util.ArrayList;
 
 public class Client {
-    private String name;
-    private String surname;
-    private ArrayList<Card> cards;
+    private final String name;
+    private final String surname;
+    private final ArrayList<Card> cards;
+    private final String passportNumber;
 
-    public Client(String name, String surname) {
+    public Client(String name, String surname, String passportNumber) {
         this.name = name;
         this.surname = surname;
         this.cards = new ArrayList<Card>();
+        this.passportNumber = passportNumber;
     }
 
-    public void addCard(int cvv, int cardNumber, double amount) {
-        Card newCard = new Card(cvv, cardNumber, amount);
+    public void addCard(Card newCard){
         cards.add(newCard);
     }
-
-    public void displayCards() {
-        if (cards.isEmpty()) {
-            System.out.println("The client has no cards.");
-            return;
-        }
-        System.out.println("Client info: \n" + name + " " + surname);
-        System.out.println("Client cards: ");
-        for (Card card : cards) {
-            System.out.println("Card number: " + card.getCardNumber() +
-                    ", cvv: " + card.getCvv() +
-                    ", amount: " + card.getAmount());
-        }
-    }
-
-    public void showNumberDuplicateCards(){
-        int duplicate = 0;
-        for(int i = 0; i < cards.size(); i++){
-            for(int j = i + 1; j < cards.size(); j++){
-                if(cards.get(i).equals(cards.get(j))){
-                    duplicate++;
-                    break;
-                }
-            }
-        }
-        if(duplicate == 0){
-            System.out.println("The client has no duplicates.");
-        }else{
-            System.out.println("The client has " + duplicate + " duplicates.");
-        }
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
+    @Override
+    public String toString() {
+        return "Client{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                '}';
     }
 
     public ArrayList<Card> getCards() {
         return cards;
     }
-
-    public void setCards(ArrayList<Card> cards) {
-        this.cards = cards;
+    public String getPassportNumber() {
+        return passportNumber;
     }
 }

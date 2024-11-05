@@ -1,18 +1,19 @@
 package by.teachmeskills.yadevich.lesson10;
 
+import by.teachmeskills.yadevich.lesson10.card.OperationCard;
 import by.teachmeskills.yadevich.lesson10.client.Client;
 
 public class Main {
     public static void main(String[] args) {
 
-        Client client1 = new Client("Marina", "Yadevich");
-        client1.addCard(348, 5476456, 6000);
-        client1.addCard(345,5476456, 4000 );
-        client1.addCard(485,056347, 2000);
-        client1.addCard(485,056347, 2000);
+        Client client1 = new Client("Marina", "Yadevich","353735BH746");
+        OperationCard.createAddCard(client1,234,457435,5000);
+        OperationCard.createAddCard(client1,234,457435,5000);
+        OperationCard.createAddCard(client1,266,457485,9000);
+        OperationCard.createAddCard(client1,000,454835,2000);
+        OperationCard.createAddCard(client1,000,454835,2000);
 
-
-        client1.displayCards();
-        client1.showNumberDuplicateCards();
+        OperationCard.displayCards(client1);
+        OperationCard.showNumberDuplicateCards(client1);
     }
 }

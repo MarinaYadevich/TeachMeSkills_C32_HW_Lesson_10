@@ -1,4 +1,4 @@
-package by.teachmeskills.yadevich.lesson10.card;
+package by.teachmeskills.yadevich.lesson10.model.card;
 
 import java.util.Objects;
 

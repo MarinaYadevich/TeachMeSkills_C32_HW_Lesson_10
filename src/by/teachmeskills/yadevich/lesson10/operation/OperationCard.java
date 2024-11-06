@@ -1,6 +1,7 @@
-package by.teachmeskills.yadevich.lesson10.card;
+package by.teachmeskills.yadevich.lesson10.operation;
 
-import by.teachmeskills.yadevich.lesson10.client.Client;
+import by.teachmeskills.yadevich.lesson10.model.card.Card;
+import by.teachmeskills.yadevich.lesson10.model.client.Client;
 
 public class OperationCard {
 
@@ -22,19 +23,14 @@ public class OperationCard {
         }
     }
     public static void showNumberDuplicateCards(Client client){
-        int duplicate = 0;
-        for(int i = 0; i < client.getCards().size(); i++){
-            for(int j = i + 1; j < client.getCards().size(); j++){
-                if(client.getCards().get(i).equals(client.getCards().get(j))){
-                    duplicate++;
-                    break;
-                }
-            }
-        }
-        if(duplicate == 0){
-            System.out.println("The " + client + " has no identical cards");
-        }else{
-            System.out.println("The " + client + " has " + duplicate + " identical cards.");
+        if (client.getCards() == null) {
+            throw new NullPointerException("Client cards list is null");
+        }else if(client.getCards().isEmpty()){
+            System.out.println("Empty map list.");
+        }else if(client.getCards().size() == 1){
+            System.out.println("The client has only one card.");
+        }else {
+            SearchDuplicateCards.searchDuplicateCards(client);
         }
     }
 }

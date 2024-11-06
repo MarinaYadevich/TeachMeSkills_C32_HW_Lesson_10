@@ -1,6 +1,6 @@
-package by.teachmeskills.yadevich.lesson10.client;
+package by.teachmeskills.yadevich.lesson10.model.client;
 
-import by.teachmeskills.yadevich.lesson10.card.Card;
+import by.teachmeskills.yadevich.lesson10.model.card.Card;
 
 import java.util.ArrayList;
 

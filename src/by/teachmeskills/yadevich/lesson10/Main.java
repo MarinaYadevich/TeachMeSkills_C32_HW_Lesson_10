@@ -1,7 +1,7 @@
 package by.teachmeskills.yadevich.lesson10;
 
-import by.teachmeskills.yadevich.lesson10.card.OperationCard;
-import by.teachmeskills.yadevich.lesson10.client.Client;
+import by.teachmeskills.yadevich.lesson10.operation.OperationCard;
+import by.teachmeskills.yadevich.lesson10.model.client.Client;
 
 public class Main {
     public static void main(String[] args) {
